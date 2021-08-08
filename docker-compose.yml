@@ -1,0 +1,57 @@
+version: "3.3"
+
+services:
+  db:
+    # For MAC M1
+    platform: linux/x86_64
+
+    image: mysql
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: Meni1971
+      MYSQL_DATABASE: yashir_db
+      MYSQL_USER: yashir_user
+      MYSQL_PASSWORD: Meni1971
+      #MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - yashir-data:/var/lib/mysql
+    networks:
+      - yashir-net
+  pma:
+    depends_on:
+      - db
+
+    # For MAC M1
+    platform: linux/x86_64
+    
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8088:80
+    restart: on-failure
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: Meni1971
+    networks:
+      - yashir-net
+  wp:
+    depends_on:
+      - db
+    build: .
+    volumes:
+      - ./wp:/var/www/html
+    ports:
+      - 8080:80
+    restart: on-failure
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: yashir_user
+      WORDPRESS_DB_PASSWORD: Meni1971
+      WORDPRESS_DB_NAME: yashir_db
+      XDEBUG_PORT: 9005
+      XDEBUG_IDEKEY: VSCode
+    networks:
+      - yashir-net
+networks:
+  yashir-net:
+volumes:
+  yashir-data:
