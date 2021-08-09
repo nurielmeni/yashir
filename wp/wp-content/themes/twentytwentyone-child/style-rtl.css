@@ -20,3 +20,32 @@
   /* Font Family */
   --global--font-primary: var(Arimo, Roboto, sans-serif);
 }
+
+.entry-header.alignfull .post-thumbnail {
+  width: 100%;
+}
+
+
+
+/* RESPONSIVE DESIGN */
+@media all and (min-width: 768px) {
+  .xs-down {
+    display: none !important;
+  }
+
+  .xs-up {
+    display: block !important;
+  }
+}
+
+
+@media all and (max-width: 767.9px) {
+  .xs-down {
+    display: block !important;
+  }
+
+  .xs-up {
+    display: none !important;
+  }
+
+}
