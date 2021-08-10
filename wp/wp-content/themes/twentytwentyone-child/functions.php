@@ -1,8 +1,8 @@
 <?php
 include_once 'includes/customizerAdjustments.php';
-include_once 'includes/nlsFbfFlow.php';
 
 const NLS_FLOW_ELEMENTS = 3;
+const NLS_FBF_FOOTER_LOGO = 'nls_fbf_footer_logo';
 
 /**
  * Add child theme styles
@@ -32,22 +32,5 @@ function nls_fbf_child_theme_setup()
 {
     load_child_theme_textdomain('nls_fbf', get_stylesheet_directory() . '/languages/');
 }
+
 add_action('after_setup_theme', 'nls_fbf_child_theme_setup');
-
-/**
- * Returns a custom logo, linked to home unless the theme supports removing the link on the home page.
- *
- * @return string Custom logo markup.
- */
-function get_footer_logo()
-{
-    $html          = '';
-
-    $custom_logo_id = get_theme_mod('nls_fbf_footer_logo');
-
-    $html .= '<a href="/" class="nls-fbf-footer-logo">';
-    $html .= '<img width="250" src="' . $custom_logo_id . '" class="custom-logo footer" alt="Fenix footer logo" />';
-    $html .= '</a>';
-
-    return $html;
-}

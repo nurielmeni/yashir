@@ -21,11 +21,49 @@
   --global--font-primary: var(Arimo, Roboto, sans-serif);
 }
 
+/* Spacing */
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.ma-0 {
+  margin: 0 !important;
+}
+.pa-0 {
+  padding: 0 !important;
+}
+
 .entry-header.alignfull .post-thumbnail {
   width: 100%;
 }
 
+#masthead {
+  display: none !important;
+}
 
+#main {
+  padding-top: 0 !important;
+}
+
+/* Overlay Image */
+.overlay-image {
+  position: relative;
+}
+
+.overlay-image-image {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+}
+
+.site-footer {
+  padding-bottom: 0;
+  font-size: 0.85rem;
+}
+
+.site-footer .site-logo {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 
 /* RESPONSIVE DESIGN */
 @media all and (min-width: 768px) {
@@ -36,8 +74,12 @@
   .xs-up {
     display: block !important;
   }
-}
 
+  .site-footer .site-logo {
+    float: none;
+    text-align: center;
+  }
+}
 
 @media all and (max-width: 767.9px) {
   .xs-down {
@@ -47,5 +89,4 @@
   .xs-up {
     display: none !important;
   }
-
 }

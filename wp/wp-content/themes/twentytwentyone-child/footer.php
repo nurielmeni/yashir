@@ -41,9 +41,11 @@
 		</nav><!-- .footer-navigation -->
 	<?php endif; ?>
 
+	<div class="site-logo alignleft">
+		<?= get_nls_footer_logo() ?>
+	</div>
 
 	<div class="powered-by aligncenter">
-		<p>כל הזכויות שמורות להפניקס <?= date("Y") ?></p>
 		<?php
 		printf(
 			esc_html__('POWERED BY %s', 'NILOOSOFT HUNTER EDGE'),
