@@ -28,10 +28,24 @@
 .ma-0 {
   margin: 0 !important;
 }
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.mr-8vw {
+  margin-right: 8vw !important;
+  position: relative;
+  z-index: 5;
+}
 .pa-0 {
   padding: 0 !important;
 }
-
+.f-title {
+  font-size: 5vw !important;
+}
+.f-text {
+  font-size: 3.5vw !important;
+}
 .entry-header.alignfull .post-thumbnail {
   width: 100%;
 }
@@ -48,11 +62,22 @@
 .overlay-image {
   position: relative;
 }
+.overlay-image .wp-block-cover__inner-container {
+  max-width: 53vw !important;
+}
 
 .overlay-image-image {
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.overlay-image-image > img {
+  height: 40vw;
+  max-height: 550px;
+  width: auto !important;
   position: absolute;
-  bottom: 40px;
-  left: 0;
+  top: 3vw;
+  left: 5vw;
 }
 
 .site-footer {
@@ -75,9 +100,16 @@
     display: block !important;
   }
 
-  .site-footer .site-logo {
-    float: none;
-    text-align: center;
+  /* Overlay Image */
+  .overlay-image {
+    min-height: 42vw;
+  }
+
+  .overlay-image-image {
+    height: 36vw;
+  }
+
+  .overlay-image-image > img {
   }
 }
 
@@ -88,5 +120,14 @@
 
   .xs-up {
     display: none !important;
+  }
+
+  .site-footer .site-logo {
+    float: none;
+    text-align: center;
+  }
+
+  .site-footer {
+    font-size: 0.55rem;
   }
 }
