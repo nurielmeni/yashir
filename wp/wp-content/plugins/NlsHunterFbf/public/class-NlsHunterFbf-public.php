@@ -196,11 +196,15 @@ class NlsHunterFbf_Public
 
             // 1. Create NCAI
             $ncaiFile = $this->createNCAI($fields, $i);
-            if (strlen($ncaiFile) > 0) array_push($files, $ncaiFile);
+            if (!empty($ncaiFile)) array_push($files, $ncaiFile);
 
             // 2. Get CV File
             $tmpCvFile = $this->getCvFile($i);
-            if (strlen($tmpCvFile) > 0) array_push($files, $tmpCvFile);
+            if (empty($tmpCvFile)) {
+                $tmpCvFile = $this->genarateCvFile($fields, $i);
+            }
+
+            if (!empty($tmpCvFile)) array_push($files, $tmpCvFile);
 
             // 3. Sent email with file attachments
             $jobCode = $fields[self::FRIEND_JOB_CODE]['value'][$i];
@@ -208,11 +212,8 @@ class NlsHunterFbf_Public
 
             // 4. Remove temp files
 
-            // Remove the temp CV file from the Upload directory
-            if ($tmpCvFile) unlink($tmpCvFile);
-
-            // Remove the temp NCAI file from the Upload directory
-            if ($ncaiFile) unlink($ncaiFile);
+            // Remove the temp CV file and NCAI file from the Upload directory
+            foreach ($files as $file) unlink($file);
         }
 
         return $count;
@@ -250,7 +251,40 @@ class NlsHunterFbf_Public
         if ($fileExt === 'ncai') {
             return $cv_dirname . DIRECTORY_SEPARATOR . 'NlsCvAnalysisInfo.' . $fileExt;
         }
-        return $cv_dirname . 'CV_FILE_' . mt_rand(100, 999) . '.' . $fileExt;
+
+        do {
+            $tempFile = $cv_dirname . 'CV_FILE_' . mt_rand(100, 999) . '.' . $fileExt;
+        } 
+        while (file_exists($tempFile));
+
+        return $tempFile;
+    }
+
+    /**
+     * Genarate cv file
+     */
+    private function genarateCvFile($fields, $i = 0)
+    {
+        $cvFile = $this->getTempFile('txt');
+
+        // Open the file for writing.
+        if (!$handle = fopen($cvFile, 'w')) {
+            return '';
+        }
+
+        // Write the data
+        foreach ($fields as $key => $field) {
+            if (!is_array($field['value']) && empty($field['value'])) continue;
+            if (strpos($key, 'friend') === false) continue;
+
+            $dataLine = $field['label'] . ': ' . (is_array($field['value']) ? $field['value'][$i] : $field['value']) . "\r\n";
+
+            if (fwrite($handle, $dataLine) === FALSE) break;
+        }
+
+        // Close the file
+        fclose($handle);
+        return $cvFile;
     }
 
     private function getPhoneData($phone)
@@ -287,7 +321,7 @@ class NlsHunterFbf_Public
         // Change the $fields value for strongSide to include the name and not the id
         foreach ($fields as $key => $field) {
             if (!is_array($field['value']) && empty($field['value'])) continue;
-            $applicant_notes .= __($field['label']) . ': ' . is_array($field['value']) ? $field['value'][$i] : $field['value'] . "\r\n";
+            $applicant_notes .= $field['label'] . ': ' . (is_array($field['value']) ? $field['value'][$i] : $field['value']) . "\r\n";
         }
         $xml_obj->addChild('Notes', $applicant_notes);
 
