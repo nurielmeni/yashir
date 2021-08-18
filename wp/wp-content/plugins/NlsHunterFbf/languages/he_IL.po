@@ -1,24 +1,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NlsHunterFbf\n"
-"POT-Creation-Date: 2021-08-18 18:26+0300\n"
-"PO-Revision-Date: 2021-08-18 18:26+0300\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2021-08-06 18:51+0300\n"
+"PO-Revision-Date: 2021-08-15 18:54+0300\n"
 "Language-Team: \n"
-"Language: he_IL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4.3\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
-"2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? 2 : 3);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: NlsHunterFbf.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: he_IL\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
@@ -77,6 +74,7 @@ msgstr "מזהה ספק"
 
 #: public/class-NlsHunterFbf-public.php:152
 #: public/class-NlsHunterFbf-public.php:157 templates/applyForJobs.php:15
+#: templates/applyForJobs.php:66
 msgid "Full Name"
 msgstr "שם החבר:"
 
@@ -86,7 +84,7 @@ msgstr "טלפון:"
 
 #: public/class-NlsHunterFbf-public.php:154 templates/applyForJobs.php:29
 msgid "Area"
-msgstr "מתגורר ב…"
+msgstr "אזור"
 
 #: public/class-NlsHunterFbf-public.php:155
 msgid "Job Code"
@@ -98,21 +96,19 @@ msgstr "ת.ז:"
 
 #: public/class-NlsHunterFbf-public.php:159 templates/applyForJobs.php:80
 msgid "Company email"
-msgstr "אימייל"
+msgstr "מייל חברה"
 
 #: public/class-NlsHunterFbf-public.php:286
 msgid "Applicant form data: "
 msgstr "פרטי החבר/ה שלי:"
 
 #: public/class-NlsHunterFbf-public.php:318
-#, fuzzy
-#| msgid "CV Applied from Alut Jobs Site"
-msgid "CV Applied from Yashir Jobs Site"
-msgstr "קורות חיים נשלחו מאתר משרות"
+msgid "CV Applied from Fenix Jobs Site"
+msgstr "קורות חיים הוגשו מאתר המשרות"
 
 #: templates/applyForJobs.php:8
 msgid "My friend details:"
-msgstr "פרטי החבר/ה שלי:"
+msgstr "פרטי החבר:"
 
 #: templates/applyForJobs.php:36
 msgid "What job?"
@@ -124,29 +120,19 @@ msgstr "צירוף קורות חיים"
 
 #: templates/applyForJobs.php:56
 msgid "Add another friend"
-msgstr "עוד חבר"
+msgstr "הוספת חבר נוסף"
 
 #: templates/applyForJobs.php:61
 msgid "My details:"
 msgstr "הפרטים שלי:"
 
-#: templates/applyForJobs.php:66
-msgid "My Name"
-msgstr "שמי:"
-
 #: templates/applyForJobs.php:86
 msgid "Submit CV"
-msgstr "שלח"
-
-#: templates/applyForJobs.php:94
-msgid "* By the terms"
-msgstr "* כפוף לתקנון"
+msgstr "הגשת מועמדות"
 
 #: templates/mailApply.php:82
-#, fuzzy
-#| msgid "CV Applied from Alut Jobs Site"
 msgid "Applied CV from Jobs Site"
-msgstr "קורות חיים נשלחו מאתר משרות"
+msgstr "קורות חיים שהוגשו דרך אתר משרות"
 
 #: templates/mailError.php:2
 msgid "Some error occured"
@@ -155,10 +141,6 @@ msgstr "התרחשה שגיאה"
 #: templates/mailError.php:3
 msgid "No CV was not submited"
 msgstr "לא נשלחו קורות חיים"
-
-#: templates/mailError.php:6 templates/mailSuccess.php:8
-msgid "Back"
-msgstr "חזור"
 
 #: templates/mailSuccess.php:4
 msgid "Thenk you!"
@@ -180,23 +162,26 @@ msgstr ".‫API fot Niloosoft HunterHRMS System"
 msgid "Meni Nurie"
 msgstr "מני נוריאל"
 
-#~ msgid "Error on uploading the file"
-#~ msgstr "התרחשה שגיאה בהעלאת הקובץ"
+msgid "Error on uploading the file"
+msgstr "התרחשה שגיאה בהעלאת הקובץ"
 
-#~ msgid "Email"
-#~ msgstr "מייל חברה"
+msgid "Name"
+msgstr "שמי:"
 
-#~ msgid "City"
-#~ msgstr "עיר"
+msgid "Email"
+msgstr "אימייל"
 
-#~ msgid "CV without a Job"
-#~ msgstr "קורות חיים ללא משרה"
+msgid "City"
+msgstr "עיר"
 
-#~ msgid "Thenk you very much for applying!"
-#~ msgstr "תודה רבה על פנייתך!"
+msgid "CV without a Job"
+msgstr "קורות חיים ללא משרה"
 
-#~ msgid "If a job match will be found, we will contact you soon."
-#~ msgstr "במידה ותימצא התאמה, ניצור קשר בקרוב."
+msgid "Thenk you very much for applying!"
+msgstr "תודה רבה על פנייתך!"
 
-#~ msgid "Good luck!"
-#~ msgstr "בהצלחה!"
+msgid "If a job match will be found, we will contact you soon."
+msgstr "במידה ותימצא התאמה, ניצור קשר בקרוב."
+
+msgid "Good luck!"
+msgstr "בהצלחה!"

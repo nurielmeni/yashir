@@ -168,6 +168,20 @@ var nls =
       return urlParams.get(param);
     };
 
+    var hideBeforeApply = function () {
+      $(".nls-apply-for-jobs").hide();
+      $("section.nls-fbf-flow-wrapper").hide();
+    };
+
+    var showHomePage = function () {
+      $("#apply-response").remove();
+      $(".nls-reply-message").remove();
+      $(".hide-response-success").show();
+      $(".hide-response-error").show();
+      $(".nls-apply-for-jobs").show();
+      $("section.nls-fbf-flow-wrapper").show();
+    };
+
     $(document).ready(function () {
       // Set the sid if exist
       getParam("sid") && $('input[name="sid"').val(getParam("sid"));
@@ -199,7 +213,7 @@ var nls =
             processData: false,
             dataType: "json",
             beforeSend: function () {
-              $(".nls-apply-for-jobs").hide();
+              hideBeforeApply();
               $(".nls-apply-for-jobs").after(
                 '<div id="apply-response" class="nls-rounded-10 nls-box-shadow"><div id="nls-loader" class="loader">אנא המתן...</div></div>'
               );
@@ -211,9 +225,9 @@ var nls =
             success: function (response) {
               $("#nls-loader").remove();
               console.log("Status: ", response.sent);
-              
+
               if (response.sent > 0) {
-                $('.hide-response-success').hide();
+                $(".hide-response-success").hide();
                 $("#apply-response").remove();
                 $('article .entry-content').append(response.html);
               } else {
@@ -224,7 +238,7 @@ var nls =
               // Call this function so the wp will inform the change to the post
               $(document.body).trigger("post-load");
             },
-            complete: function() {
+            complete: function () {
               window.history.pushState({}, '/');
             },
             type: "POST",
@@ -234,7 +248,20 @@ var nls =
         }
       );
 
-      // Create an empty element 
+      // State handler
+      window.addEventListener("popstate", function (event) {
+        if (event.state === null) {
+          showHomePage();
+        }
+      });
+
+      // Apply friend button handler
+      $(".apply-friend a").on("click", function () {
+        $(".friends-container")[0].scrollIntoView();
+        $("#friend-name--0")[0].focus();
+      });
+
+      // Create an empty element
       emptyFriendDetails = $('.nls-apply-for-jobs .friends-details .friends-container').html();
 
       // Add new friend hendler
@@ -280,6 +307,11 @@ var nls =
         $('input[name="' + $(this).attr("name") + '"]').prop("checked")
           ? $(showClass).show()
           : $(showClass).hide();
+      });
+
+      $(document).on('click', 'button.nls-btn.back', function() {
+        $(this).parents('section.nls-hunter-fbf-wrapper').find('form.nls-apply-for-jobs').slideDown()
+        $(this).parent().remove();
       });
 
       // Make sure to initilize the radio display options

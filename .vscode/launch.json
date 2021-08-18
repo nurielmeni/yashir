@@ -5,7 +5,14 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Listen for XDebug",
+      "type": "chrome",
+      "request": "launch",
+      "name": "client: chrome",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}/wp/"
+    },
+    {
+      "name": "Listen: XDebug",
       "type": "php",
       "request": "launch",
       "port": 9005,
@@ -13,6 +20,12 @@
         "/var/www/html": "${workspaceRoot}/wp/"
       },
       "stopOnEntry": false
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Launch & Debug",
+      "configurations": ["Listen: XDebug", "client: chrome"]
     }
   ]
 }

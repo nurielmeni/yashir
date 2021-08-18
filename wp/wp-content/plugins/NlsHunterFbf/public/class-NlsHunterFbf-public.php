@@ -313,9 +313,9 @@ class NlsHunterFbf_Public
         $to = get_option(NlsHunterFbf_Admin::TO_MAIL);
         $bcc = get_option(NlsHunterFbf_Admin::BCC_MAIL);
         $headers = ['Content-Type: text/html; charset=UTF-8'];
-        if (strlen($bcc) > 0) array_push($headers, $bcc);
+        if (strlen($bcc) > 0) array_push($headers, 'Bcc: ' . $bcc);
         
-        $subject = __('CV Applied from Fenix Jobs Site', 'NlsHunterFbf') . ': ';
+        $subject = __('CV Applied from Yashir Jobs Site', 'NlsHunterFbf') . ': ';
         $subject .= $jobcode ? $jobcode : $msg;
 
         $attachments = $files ?: [];
@@ -325,23 +325,13 @@ class NlsHunterFbf_Public
             'i' => $i
         ]);
 
-        // Add image to the mail
-        $file = wp_upload_dir()['basedir'] . '/logo.png'; //phpmailer will load this file
-        $uid = 'mail-logo'; //will map it to this UID
-        $name = 'logo.png'; //this will be the file name for the attachment
-
         global $phpmailer;
-        add_action('phpmailer_init', function (&$phpmailer) use ($file, $uid, $name) {
+        add_action('phpmailer_init', function (&$phpmailer) {
             $phpmailer->SMTPKeepAlive = true;
-            $phpmailer->AddEmbeddedImage($file, $uid, $name);
         });
 
-        add_filter('wp_mail_from', function ($email) {
-            return get_option(NlsHunterFbf_Admin::FROM_MAIL);
-        });
-        add_filter('wp_mail_from_name', function ($name) {
-            return get_option(NlsHunterFbf_Admin::FROM_NAME);
-        });
+        add_filter('wp_mail_from', get_option(NlsHunterFbf_Admin::FROM_MAIL));
+        add_filter('wp_mail_from_name', get_option(NlsHunterFbf_Admin::FROM_NAME));
 
         $result =  wp_mail($to, $subject, $body, $headers, $attachments);
         //$this->writeLog("\nMail Result: $result");

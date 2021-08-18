@@ -45,7 +45,7 @@ $jobOptions = $jobs;
                 </div>
 
                 <!--  CV FILE -->
-                <div class="nls-apply-field browse text-center">
+                <div class="nls-apply-field browse">
                     <label for="friend-cv--0"><?= __('Append CV File', 'NlsHunterFbf') ?></label>
                     <input type="file" id="friend-cv--0" name="friend-cv[]" hidden class="ltr" validator="required" aria-invalid="false" aria-required="true">
                     <div class="help-block"></div>
@@ -53,7 +53,7 @@ $jobOptions = $jobs;
             </div>
         </div>
         <div class="form-footer">
-            <a class="text-button add-friend"><?= '+ ' . __('Add another friend', 'NlsHunterFbf') ?></a>
+            <a class="text-button add-friend"><?= __('Add another friend', 'NlsHunterFbf') ?></a>
         </div>
     </div>
     <div class="employee-details">
@@ -63,7 +63,7 @@ $jobOptions = $jobs;
         <div class="form-body flex space-between align-center wrap">
             <!--  EMPLOYEE NAME -->
             <div class="nls-apply-field">
-                <label for="employee-name"><?= __('Full Name', 'NlsHunterFbf') ?></label>
+                <label for="employee-name"><?= __('My Name', 'NlsHunterFbf') ?></label>
                 <input type="text" name="employee-name" validator="required" class="" aria-invalid="false" aria-required="true">
                 <div class="help-block"></div>
             </div>
@@ -71,7 +71,7 @@ $jobOptions = $jobs;
             <!-- EMPLOYEE ID -->
             <div class="nls-apply-field">
                 <label for="employee-id"><?= __('Employee ID', 'NlsHunterFbf') ?></label>
-                <input type="text" name="employee-id" validator="required" class="ltr" aria-invalid="false" aria-required="true" placeholder="usf-12345">
+                <input type="text" name="employee-id" validator="required ISRID" class="ltr" aria-invalid="false" aria-required="true">
                 <div class="help-block"></div>
             </div>
 
@@ -90,4 +90,8 @@ $jobOptions = $jobs;
     <div class="form-footer">
         <div class="help-block"></div>
     </div>
+    <div class="form-footer">
+        <p><?= __('* By the terms', 'NlsHunterFbf') ?></p>
+    </div>
+
 </form>

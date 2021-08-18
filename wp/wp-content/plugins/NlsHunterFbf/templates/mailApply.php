@@ -79,7 +79,7 @@
 
 <body>
     <div id="nls-wrapper">
-        <h1><img src="cid:mail-logo" /><?= __('Applied CV from Jobs Site', 'NlsHunterFbf') ?></h1>
+        <h1><?= __('Applied CV from Jobs Site', 'NlsHunterFbf') ?></h1>
         <table>
             <?php foreach ($fields as $field) : ?>
                 <?php if (is_array($field['value']) || !empty($field['value'])) : ?>

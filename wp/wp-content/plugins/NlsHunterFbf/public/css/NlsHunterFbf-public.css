@@ -3,7 +3,10 @@
     Author     : nurielmeni
 */
 :root {
-  --input-invalid: #af4040;
+  --input-invalid: #ffb9b9;
+  --nls-plugin-bg: #d3242a;
+  --nls-plugin-text: #ffffff;
+  --nls-plugin-primary: #00529b;
 }
 
 *[disabled="disabled"] {
@@ -87,10 +90,14 @@ form .help-block {
 }
 
 /** NLS APPLY FORM **/
+section.nls-hunter-fbf-wrapper {
+  background-color: var(--nls-plugin-bg);
+  margin: 0 !important;
+  color: var(--nls-plugin-text);
+}
+
 section.nls-hunter-fbf-wrapper form {
   padding: 2rem 3rem;
-  border-radius: 10px;
-  background-color: var(--global--color-white);
 }
 
 section.nls-hunter-fbf-wrapper .friends-details {
@@ -106,6 +113,8 @@ section.nls-hunter-fbf-wrapper .friends-details {
 
 .nls-apply-for-jobs .friends-details .friends-container .form-body:first-child {
   border-top: none;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .nls-apply-for-jobs .friends-details .friends-container .form-body span.remove {
@@ -115,7 +124,7 @@ section.nls-hunter-fbf-wrapper .friends-details {
   background-position: center center;
   width: 60px;
   height: 60px;
-  background-color: var(--global--color-white);
+  background-color: var(--nls-plugin-bg);
   top: -30px;
   left: calc(50% - 30px);
   cursor: pointer;
@@ -138,7 +147,7 @@ section.nls-hunter-fbf-wrapper h2.form-title {
 .nls-apply-field {
   display: flex;
   flex-direction: column;
-  width: calc(19% - 1rem);
+  width: calc(24% - 1rem);
 }
 
 .employee-details .nls-apply-field {
@@ -149,8 +158,13 @@ section.nls-hunter-fbf-wrapper h2.form-title {
 .nls-apply-field select {
   height: 2.75rem;
   border: 1px solid !important;
-  border-radius: 50px !important;
+  border-radius: 0.5rem !important;
   padding: 0 1rem !important;
+  color: var(--nls-plugin-primary) !important;
+}
+
+.nls-apply-field select {
+  padding-left: 2rem !important;
 }
 
 .nls-apply-field.browse label {
@@ -158,8 +172,6 @@ section.nls-hunter-fbf-wrapper h2.form-title {
 }
 
 .nls-apply-field label {
-  padding-left: 1rem;
-  padding-right: 1rem;
   margin-bottom: 0;
 }
 
@@ -171,11 +183,7 @@ section.nls-hunter-fbf-wrapper h2.form-title {
 }
 
 .nls-apply-field.browse {
-  color: var(--form--color-text);
-  line-height: 2.75rem;
-  height: 2.75rem;
-  border: 1px solid !important;
-  border-radius: 50px !important;
+  width: 100% !important;
 }
 
 .nls-apply-field.browse .file-selected {
@@ -185,8 +193,7 @@ section.nls-hunter-fbf-wrapper h2.form-title {
 .nls-apply-field.browse .file-selected:after {
   content: "\2713";
   position: absolute;
-  left: 1rem;
-  line-height: 2.75rem;
+  right: 20rem;
 }
 
 .nls-apply-field.employee-email {
@@ -194,30 +201,49 @@ section.nls-hunter-fbf-wrapper h2.form-title {
 }
 
 .nls-apply-field.employee-email:after {
-  content: "@fnx.co.il";
+  content: "@yashir.co.il";
   position: absolute;
-  top: 2.15rem;
-  right: 1rem;
+  top: 31px;
+  right: 1px;
   direction: ltr;
+  background-color: var(--nls-plugin-primary);
+  color: var(--nls-plugin-text);
+  height: 42px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  line-height: 42px;
 }
 
 .nls-apply-field.employee-email input {
-  padding-right: 6.5rem !important;
+  padding-right: 9rem !important;
+}
+
+section.nls-hunter-fbf-wrapper button,
+section.nls-hunter-fbf-wrapper a.text-button {
+  background-color: var(--nls-plugin-primary) !important;
+  border-radius: 0.5rem !important;
+  padding: 5px 2rem;
 }
 
 section.nls-hunter-fbf-wrapper a.text-button {
-  text-decoration: underline;
+  padding: 7.5px 2rem;
+  color: var(--nls-plugin-text);
+  border: 3px solid var(--nls-plugin-primary);
 }
-
-section.nls-hunter-fbf-wrapper button.apply-cv {
-  background-color: #ff5a23 !important;
-  border-radius: 50px;
-  height: 2.75rem;
-  padding: 0 2rem;
+section.nls-hunter-fbf-wrapper a.text-button:hover {
+  border-color: var(--nls-plugin-text);
 }
 
 .employee-details .form-body .nls-apply-field {
   margin-left: 1rem;
+}
+
+button.nls-btn {
+  height: 44px !important;
+  padding: 0 2rem !important;
+  line-height: 44px;
 }
 
 /* NLS Flash Message */

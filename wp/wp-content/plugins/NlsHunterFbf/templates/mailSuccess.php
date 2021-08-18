@@ -4,4 +4,6 @@
         <h2><strong><?= __('Thenk you!', 'NlsHunterFbf') ?></strong></h2>
         <h2><?= __('The details recieved successfully', 'NlsHunterFbf') ?></h2>
     </div>
+    <br />
+    <button class="nls-btn back"><?= __('Back', 'NlsHunterFbf') ?></button>
 </div>
