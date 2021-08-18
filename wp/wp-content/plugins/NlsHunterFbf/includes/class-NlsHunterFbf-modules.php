@@ -23,7 +23,10 @@ class NlsHunterFbf_modules
 ?>
 
         <section class="nls-hunter-fbf-wrapper nls-main-row alignfull">
-            <?= render('applyForJobs', ['jobs' => $this->model->getJobsBySupplierId()]) ?>
+            <?= render('applyForJobs', [
+                'jobs' => $this->model->getJobsBySupplierId(),
+                'supplierId' => get_option(NlsHunterFbf_Admin::NSOFT_SUPPLIER_ID)
+            ]) ?>
         </section>
 
 <?php

@@ -32,7 +32,6 @@ class NlsHunterFbf_model
             return null;
         }
         $this->auth = $this->nlsSecutity->isAuth();
-        $this->supplierId = key_exists('sid', $_GET) ? $_GET['sid'] : get_option(NlsHunterFbf_Admin::NSOFT_SUPPLIER_ID);
 
         if (!$this->auth) {
             $username = get_option(NlsHunterFbf_Admin::NLS_SECURITY_USERNAME);
