@@ -229,10 +229,11 @@ var nls =
               if (response.sent > 0) {
                 $(".hide-response-success").hide();
                 $("#apply-response").remove();
-                $('article .entry-content').append(response.html);
+                $('.nls-apply-for-jobs').after(response.html);
               } else {
                 $('.hide-response-error').hide();
-                $("#apply-response").html(response.html);
+                $("#apply-response").remove();
+                $('.nls-apply-for-jobs').after(response.html);
               }
 
               // Call this function so the wp will inform the change to the post
@@ -310,7 +311,7 @@ var nls =
       });
 
       $(document).on('click', 'button.nls-btn.back', function() {
-        $(this).parents('section.nls-hunter-fbf-wrapper').find('form.nls-apply-for-jobs').slideDown()
+        $(this).siblings('section.nls-hunter-fbf-wrapper').find('form.nls-apply-for-jobs').slideDown()
         $(this).parent().remove();
       });
 
