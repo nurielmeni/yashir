@@ -200,6 +200,7 @@ section.nls-hunter-fbf-wrapper h2.form-title {
   position: relative;
 }
 
+/*
 .nls-apply-field.employee-email:after {
   content: "@yashir.co.il";
   position: absolute;
@@ -216,9 +217,11 @@ section.nls-hunter-fbf-wrapper h2.form-title {
   line-height: 42px;
 }
 
+
 .nls-apply-field.employee-email input {
   padding-right: 9rem !important;
 }
+*/
 
 section.nls-hunter-fbf-wrapper button,
 section.nls-hunter-fbf-wrapper a.text-button {
