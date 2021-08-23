@@ -9,6 +9,11 @@
   --nls-plugin-primary: #00529b;
 }
 
+/* Color Classes */
+.fg-white {
+  color: var(--nls-plugin-text) !important;
+}
+
 *[disabled="disabled"] {
   cursor: not-allowed;
   pointer-events: all;

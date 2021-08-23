@@ -3,5 +3,5 @@
     <p><?= __('No CV was not submited', 'NlsHunterFbf') ?></p>
     <p><?= $msg ?></p>
     <br />
-    <button class="nls-btn back"><?= __('Back', 'NlsHunterFbf') ?></button>
+    <button class="nls-btn back fg-white"><?= __('Back', 'NlsHunterFbf') ?></button>
 </div>
