@@ -78,7 +78,7 @@ $jobOptions = $jobs;
             <!--  EMAIL -->
             <div class="nls-apply-field employee-email">
                 <label for="employee-email"><?= __('Company email', 'NlsHunterFbf') ?></label>
-                <input type="text" name="employee-email" validator="required" class="ltr text-right" aria-invalid="false" aria-required="true">
+                <input type="text" name="employee-email" validator="required email" class="ltr text-right" aria-invalid="false" aria-required="true">
                 <div class="help-block"></div>
             </div>
 
