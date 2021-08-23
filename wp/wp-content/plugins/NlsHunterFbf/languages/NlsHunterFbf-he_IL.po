@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NlsHunterFbf\n"
 "POT-Creation-Date: 2021-08-18 18:26+0300\n"
-"PO-Revision-Date: 2021-08-23 21:44+0300\n"
+"PO-Revision-Date: 2021-08-23 22:24+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: he_IL\n"
@@ -166,7 +166,7 @@ msgstr "תודה!"
 
 #: templates/mailSuccess.php:5
 msgid "The details recieved successfully"
-msgstr "הפרטים נקלטו הבצלחה"
+msgstr "הפרטים נקלטו בהצלחה"
 
 #. Plugin Name of the plugin/theme
 msgid "NlsHunterFbf"
