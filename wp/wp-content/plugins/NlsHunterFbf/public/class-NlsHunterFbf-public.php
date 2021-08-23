@@ -156,7 +156,7 @@ class NlsHunterFbf_Public
 
         $fields[self::EMPLOYEE_NAME] = ['label' => __('Full Name', 'NlsHunterFbf'), 'value' => isset($_POST[self::EMPLOYEE_NAME]) ? $_POST[self::EMPLOYEE_NAME] : ""];
         $fields[self::EMPLOYEE_ID] = ['label' => __('Employee ID', 'NlsHunterFbf'), 'value' => isset($_POST[self::EMPLOYEE_ID]) ? $_POST[self::EMPLOYEE_ID] : ""];
-        $fields[self::EMPLOYEE_EMAIL] = ['label' => __('Company email', 'NlsHunterFbf'), 'value' => isset($_POST[self::EMPLOYEE_EMAIL]) ? $_POST[self::EMPLOYEE_EMAIL] . '@fnx.co.il' : ""];
+        $fields[self::EMPLOYEE_EMAIL] = ['label' => __('Company email', 'NlsHunterFbf'), 'value' => isset($_POST[self::EMPLOYEE_EMAIL]) ? $_POST[self::EMPLOYEE_EMAIL] : ""];
 
         return $fields;
     }
