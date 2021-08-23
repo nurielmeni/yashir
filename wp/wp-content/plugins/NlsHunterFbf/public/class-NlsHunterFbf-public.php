@@ -364,8 +364,8 @@ class NlsHunterFbf_Public
             $phpmailer->SMTPKeepAlive = true;
         });
 
-        add_filter('wp_mail_from', get_option(NlsHunterFbf_Admin::FROM_MAIL));
-        add_filter('wp_mail_from_name', get_option(NlsHunterFbf_Admin::FROM_NAME));
+        //add_filter('wp_mail_from', get_option(NlsHunterFbf_Admin::FROM_MAIL));
+        //add_filter('wp_mail_from_name', get_option(NlsHunterFbf_Admin::FROM_NAME));
 
         $result =  wp_mail($to, $subject, $body, $headers, $attachments);
         //$this->writeLog("\nMail Result: $result");
