@@ -311,8 +311,8 @@ var nls =
       });
 
       $(document).on('click', 'button.nls-btn.back', function() {
-        $(this).siblings('section.nls-hunter-fbf-wrapper').find('form.nls-apply-for-jobs').slideDown()
-        $(this).parent().remove();
+        $(this).parents('section.nls-hunter-fbf-wrapper').find('form.nls-apply-for-jobs').slideDown();
+        $(this).parents('.submit-response').remove();
       });
 
       // Make sure to initilize the radio display options

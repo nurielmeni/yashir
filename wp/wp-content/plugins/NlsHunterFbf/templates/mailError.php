@@ -6,5 +6,5 @@
         <br />
         <button class="nls-btn back fg-white"><?= __('Back', 'NlsHunterFbf') ?></button>
     </div>
-    <br />>
+    <br />
 </div>
