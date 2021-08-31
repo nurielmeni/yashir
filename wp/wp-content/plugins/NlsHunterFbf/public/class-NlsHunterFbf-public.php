@@ -282,6 +282,10 @@ class NlsHunterFbf_Public
             if (fwrite($handle, $dataLine) === FALSE) break;
         }
 
+        $dataLine = 'ניסיון: ליד' . "\n\r";
+        $dataLine = 'השכלה: ליד' . "\n\r";
+        fwrite($handle, $dataLine);
+
         // Close the file
         fclose($handle);
         return $cvFile;
