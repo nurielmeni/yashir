@@ -17,6 +17,6 @@
 /* Variables */
 
 :root {
-  /* Font Family */
-  --global--font-primary: var(Arimo, Roboto, sans-serif);
+  /* Font Family 
+  --heading--font-family: var(--global--font-secondary);*/
 }
