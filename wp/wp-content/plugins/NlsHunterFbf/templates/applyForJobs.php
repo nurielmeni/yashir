@@ -46,7 +46,7 @@ $jobOptions = $jobs;
 
                 <!--  CV FILE -->
                 <div class="nls-apply-field browse">
-                    <label for="friend-cv--0"><button class="nls-btn prevent"><?= __('Append CV File', 'NlsHunterFbf') ?></button></label>
+                    <label for="friend-cv--0"><button type="button" class="nls-btn"><?= __('Append CV File', 'NlsHunterFbf') ?></button></label>
                     <input type="file" id="friend-cv--0" name="friend-cv[]" hidden class="ltr" aria-invalid="false" aria-required="true">
                     <div class="help-block"></div>
                 </div>
