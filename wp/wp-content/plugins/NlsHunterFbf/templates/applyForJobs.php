@@ -24,12 +24,12 @@ $jobOptions = $jobs;
                     <div class="help-block"></div>
                 </div>
 
-                <!--  CITY -->
+                <!--  CITY 
                 <div class="nls-apply-field">
                     <label for="friend-area--0"><?= __('Area', 'NlsHunterFbf') ?></label>
                     <input type="text" id="friend-area--0" name="friend-area[]" aria-invalid="false" aria-required="true">
                     <div class="help-block"></div>
-                </div>
+                </div>-->
 
                 <!-- JOB SELECT -->
                 <div class="nls-apply-field  select-wrapper">
@@ -46,7 +46,7 @@ $jobOptions = $jobs;
 
                 <!--  CV FILE -->
                 <div class="nls-apply-field browse">
-                    <label for="friend-cv--0"><?= __('Append CV File', 'NlsHunterFbf') ?></label>
+                    <label for="friend-cv--0"><button class="nls-btn"><?= __('Append CV File', 'NlsHunterFbf') ?></button></label>
                     <input type="file" id="friend-cv--0" name="friend-cv[]" hidden class="ltr" aria-invalid="false" aria-required="true">
                     <div class="help-block"></div>
                 </div>
@@ -68,12 +68,12 @@ $jobOptions = $jobs;
                 <div class="help-block"></div>
             </div>
 
-            <!-- EMPLOYEE ID -->
+            <!-- EMPLOYEE ID 
             <div class="nls-apply-field">
                 <label for="employee-id"><?= __('Employee ID', 'NlsHunterFbf') ?></label>
                 <input type="text" name="employee-id" validator="required ISRID" class="ltr" aria-invalid="false" aria-required="true">
                 <div class="help-block"></div>
-            </div>
+            </div>-->
 
             <!--  EMAIL -->
             <div class="nls-apply-field employee-email">

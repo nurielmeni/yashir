@@ -251,7 +251,6 @@ section.nls-hunter-fbf-wrapper a.text-button:hover {
 button.nls-btn {
   height: 44px !important;
   padding: 0 2rem !important;
-  line-height: 44px;
 }
 
 /* NLS Flash Message */
