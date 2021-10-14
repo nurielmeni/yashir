@@ -46,14 +46,14 @@ $jobOptions = $jobs;
 
                 <!--  CV FILE -->
                 <div class="nls-apply-field browse">
-                    <label for="friend-cv--0" class="text-button"><?= __('Append CV File', 'NlsHunterFbf') ?></label>
+                    <label for="friend-cv--0"><span class="text-button"><?= __('Append CV File', 'NlsHunterFbf') ?></span></label>
                     <input type="file" id="friend-cv--0" name="friend-cv[]" hidden class="ltr" aria-invalid="false" aria-required="true">
                     <div class="help-block"></div>
                 </div>
             </div>
         </div>
         <div class="form-footer">
-            <a class="text-button add-friend"><?= __('Add another friend', 'NlsHunterFbf') ?></a>
+            <a class="add-friend"><span class="text-button"><?= __('Add another friend', 'NlsHunterFbf') ?></span></a>
         </div>
     </div>
     <div class="employee-details">
