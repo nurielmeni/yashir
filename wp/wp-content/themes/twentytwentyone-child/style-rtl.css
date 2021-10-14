@@ -20,6 +20,7 @@
   /* Font Family */
   --yashir--font-primary: Arimo, Roboto, sans-serif;
   --global--font-primary: Arimo, Roboto, sans-serif;
+  --global--font-secondary: Arimo, Roboto, sans-serif;
   --heading--font-family: var(--global--font-primary);
 }
 
