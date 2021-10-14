@@ -154,11 +154,11 @@ section.nls-hunter-fbf-wrapper h2.form-title {
 .nls-apply-field {
   display: flex;
   flex-direction: column;
-  width: calc(24% - 1rem);
+  width: calc(33% - 1rem);
 }
 
 .employee-details .nls-apply-field {
-  width: calc(24% - 1rem);
+  width: calc(33% - 1rem);
 }
 
 .nls-apply-field input,
