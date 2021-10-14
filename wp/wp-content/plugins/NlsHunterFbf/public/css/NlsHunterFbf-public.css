@@ -199,6 +199,8 @@ section.nls-hunter-fbf-wrapper h2.form-title {
   content: "\2713";
   position: absolute;
   right: 20rem;
+  font-size: 34px;
+  top: -12px;
 }
 
 .nls-apply-field.employee-email {
