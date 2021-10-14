@@ -194,11 +194,14 @@ section.nls-hunter-fbf-wrapper h2.form-title {
 .nls-apply-field.browse .file-selected {
   position: relative;
 }
+.nls-apply-field.browse .file-selected span {
+  padding-left: 3rem;
+}
 
 .nls-apply-field.browse .file-selected:after {
   content: "\2713";
   position: absolute;
-  right: 20rem;
+  right: 20.5rem;
   font-size: 34px;
   top: -12px;
 }
