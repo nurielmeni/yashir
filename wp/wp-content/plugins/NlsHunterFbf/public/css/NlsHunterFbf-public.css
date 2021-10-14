@@ -229,18 +229,18 @@ section.nls-hunter-fbf-wrapper h2.form-title {
 */
 
 section.nls-hunter-fbf-wrapper button,
-section.nls-hunter-fbf-wrapper a.text-button {
+section.nls-hunter-fbf-wrapper .text-button {
   background-color: var(--nls-plugin-primary) !important;
   border-radius: 0.5rem !important;
   padding: 5px 2rem;
 }
 
-section.nls-hunter-fbf-wrapper a.text-button {
+section.nls-hunter-fbf-wrapper .text-button {
   padding: 7.5px 2rem;
   color: var(--nls-plugin-text);
   border: 3px solid var(--nls-plugin-primary);
 }
-section.nls-hunter-fbf-wrapper a.text-button:hover {
+section.nls-hunter-fbf-wrapper .text-button:hover {
   border-color: var(--nls-plugin-text);
 }
 
