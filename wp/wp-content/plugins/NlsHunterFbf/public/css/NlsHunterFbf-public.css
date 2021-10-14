@@ -239,6 +239,8 @@ section.nls-hunter-fbf-wrapper .text-button {
   padding: 7.5px 2rem;
   color: var(--nls-plugin-text);
   border: 3px solid var(--nls-plugin-primary);
+  font-size: 18px;
+  font-weight: 500;
 }
 section.nls-hunter-fbf-wrapper .text-button:hover {
   border-color: var(--nls-plugin-text);
