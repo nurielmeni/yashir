@@ -336,8 +336,8 @@ class NlsHunterFbf_Public
         $recomendingPerson = $xml_obj->addChild('RecommendingPerson');
         $recomendingPerson->addChild('Email', $fields[self::EMPLOYEE_EMAIL]['value']);
         $recomendingPerson->addChild('EntityLocalName', $fields[self::EMPLOYEE_NAME]['value']);
-        $recomendingPerson->addChild('ForeignEntityCode', $fields[self::EMPLOYEE_ID]['value']);
-        $recomendingPerson->addChild('PersonalId', $fields[self::EMPLOYEE_ID]['value']);
+        //$recomendingPerson->addChild('ForeignEntityCode', $fields[self::EMPLOYEE_ID]['value']);
+        //$recomendingPerson->addChild('PersonalId', $fields[self::EMPLOYEE_ID]['value']);
         $recomendingPerson->addChild('SupplierId', $fields[self::SID]['value']);
 
         $ncaiFile = $this->getTempFile('ncai');
