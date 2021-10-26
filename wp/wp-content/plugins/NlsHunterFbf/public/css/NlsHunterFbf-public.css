@@ -239,12 +239,19 @@ section.nls-hunter-fbf-wrapper button,
 section.nls-hunter-fbf-wrapper .text-button {
   background-color: var(--nls-plugin-primary) !important;
   border-radius: 0.5rem !important;
+  padding: 5px 2rem;
+}
+
+section.nls-hunter-fbf-wrapper .text-button.add-resume {
+  padding: 0;
+  font-size: 13px;
 }
 
 section.nls-hunter-fbf-wrapper .text-button {
+  padding: 7.5px 2rem;
   color: var(--nls-plugin-text);
   border: 3px solid var(--nls-plugin-primary);
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 500;
 }
 section.nls-hunter-fbf-wrapper .text-button:hover {
