@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NlsHunterFbf\n"
 "POT-Creation-Date: 2021-08-18 18:26+0300\n"
-"PO-Revision-Date: 2021-08-23 22:24+0300\n"
+"PO-Revision-Date: 2021-10-26 16:40+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: he_IL\n"
@@ -98,7 +98,7 @@ msgstr "ת.ז:"
 
 #: public/class-NlsHunterFbf-public.php:159 templates/applyForJobs.php:80
 msgid "Company email"
-msgstr "אימייל"
+msgstr "אימייל פרטי:"
 
 #: public/class-NlsHunterFbf-public.php:286
 msgid "Applicant form data: "
