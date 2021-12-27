@@ -1,0 +1,3 @@
+1e285a	purple
+ff375c	red
+5d3bff	blue
