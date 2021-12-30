@@ -260,4 +260,12 @@
   .wp-block-spacer.xs-down {
     min-height: 300px;
   }
+
+  .header-text .top-text.header-1 p {
+    font-size: 5.75vw;
+  }
+
+  .header-text .top-text.header-2 p {
+    font-size: 4vw;
+  }
 }
