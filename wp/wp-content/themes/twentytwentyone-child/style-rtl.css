@@ -268,4 +268,9 @@
   .header-text .top-text.header-2 p {
     font-size: 4vw;
   }
+
+  section.nls-hunter-fbf-wrapper form > .form-section img.xs-down {
+    top: -78px;
+    width: 180px;
+  }
 }
