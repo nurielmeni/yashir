@@ -22,9 +22,11 @@
   --global--font-primary: Arimo, Roboto, sans-serif;
   --global--font-secondary: Arimo, Roboto, sans-serif;
   --heading--font-family: var(--global--font-primary);
+  --yashir--purple-color: #1e285a;
+  --yashir--red-color: #ff375c;
+  --yashir--blue-color: #5d3bff;
+  --yashir--white-color: #ffffff;
 }
-
-
 
 /* Spacing */
 .mb-0 {
@@ -97,14 +99,80 @@
   padding-right: 2rem;
 }
 
+.wp-block-cover.transparen-overlay.has-background-dim:not([class*="-background-color"]),
+.wp-block-cover.transparen-overlay {
+  background-color: transparent;
+  justify-content: flex-start;
+}
+
+.mobile-bg .wp-block-cover__inner-container {
+  width: 55%;
+  margin-right: 1rem;
+  text-align: right;
+}
+
+.desktop-bg .wp-block-cover__inner-container {
+  width: 55%;
+  margin-right: 3rem;
+  text-align: right;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.wp-block-group__inner-container .header-text {
+  top: 2rem;
+  right: 2rem;
+  width: 56% !important;
+  color: var(--yashir--purple-color);
+}
+
+.header-text .top-text.header-1 p {
+  font-size: 7.5vw;
+  margin: 0;
+  line-height: 0.9;
+}
+
+.header-text .top-text.header-2 {
+  margin-top: 0.85rem;
+}
+.header-text .top-text.header-2 p {
+  font-size: 4.5vw;
+  margin: 0;
+  line-height: 0.9;
+}
+
 /* RESPONSIVE DESIGN */
-@media all and (min-width: 768px) {
+@media all and (min-width: 880px) {
   .xs-down {
     display: none !important;
   }
 
   .xs-up {
     display: block !important;
+  }
+
+  .logo-main {
+    top: 4.55rem;
+    right: 1rem;
+  }
+
+  .header-text .top-text.header-1 p {
+    font-size: 6vw;
+  }
+
+  .wp-block-image.xs-up {
+    padding-top: 54px;
+  }
+
+  .wp-block-group.header-text {
+    top: 2.5rem;
+    right: 11rem;
   }
 
   /* Overlay Image */
@@ -117,13 +185,46 @@
   }
 }
 
-@media all and (max-width: 767.9px) {
+@media all and (min-width: 1000px) {
+  .wp-block-group.header-text {
+    right: 12rem;
+  }
+}
+
+@media all and (min-width: 1180px) {
+  .wp-block-group.header-text {
+    top: calc(1.5rem + 5vw);
+  }
+
+  .logo-main {
+    top: calc(3.5rem + 5vw);
+    right: 2rem;
+  }
+
+  .header-text .top-text.header-1 p {
+    font-size: 74px;
+  }
+
+  .header-text .top-text.header-2 p {
+    font-size: 52px;
+  }
+}
+
+@media all and (max-width: 879.9px) {
   .xs-down {
     display: block !important;
   }
 
   .xs-up {
     display: none !important;
+  }
+
+  .logo-main {
+    right: 2rem;
+  }
+
+  .wp-block-group.header-text {
+    top: 4rem;
   }
 
   .site-footer .site-logo {

@@ -49,6 +49,7 @@ services:
       WORDPRESS_DB_NAME: yashir_db
       XDEBUG_PORT: 9005
       XDEBUG_IDEKEY: VSCode
+      WORDPRESS_DEBUG: 1
     networks:
       - yashir-net
 networks:

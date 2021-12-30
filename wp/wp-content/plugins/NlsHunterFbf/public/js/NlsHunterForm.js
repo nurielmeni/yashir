@@ -192,7 +192,7 @@ var nls =
       // Apply selected jobs
       $(document).on(
         "click",
-        ".nls-apply-for-jobs button.apply-cv",
+        ".nls-apply-for-jobs .nls-button .apply-cv",
         function (event) {
           var applyCvButton = this;
           var form = $(this).parents("form.nls-apply-for-jobs");
@@ -266,7 +266,7 @@ var nls =
       emptyFriendDetails = $('.nls-apply-for-jobs .friends-details .friends-container').html();
 
       // Add new friend hendler
-      $('.nls-apply-for-jobs .friends-details .form-footer a.add-friend').on('click', function () {
+      $('.nls-apply-for-jobs .friends-details .form-footer .nls-button .add-friend').on('click', function () {
         var count = $('.nls-apply-for-jobs .friends-details .friends-container .form-body').length;
         var needle = /--0/g;
         var re = '--' + count;
@@ -310,7 +310,7 @@ var nls =
           : $(showClass).hide();
       });
 
-      $(document).on('click', 'button.nls-btn.back', function() {
+      $(document).on('click', 'button.nls-btn.back', function () {
         $(this).parents('section.nls-hunter-fbf-wrapper').find('form.nls-apply-for-jobs').slideDown();
         $(this).parents('.submit-response').remove();
       });
