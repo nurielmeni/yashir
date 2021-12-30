@@ -1,0 +1,20 @@
+AuthUserFile /dev/null
+AuthGroupFile /dev/null
+AuthName "WordPress Admin Access Control"
+AuthType Basic
+<Files admin-ajax.php>
+  Order allow,deny
+  Allow from all
+  Satisfy any
+</Files>
+<LIMIT GET>
+order deny,allow
+deny from all
+# whitelist Meni's Computer
+allow from 212.179.121.90
+# whitelist Meni's MAC
+allow from 31.154.236.84
+# whitelist the website
+allow from 185.53.210.13
+# 850157
+allow from 82.166.81.253
