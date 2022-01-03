@@ -12,6 +12,7 @@ order deny,allow
 deny from all
 # whitelist Meni's Computer
 allow from 212.179.121.90
+allow from 81.218.102.252
 # whitelist Meni's MAC
 allow from 31.154.236.84
 # whitelist the website
