@@ -14,7 +14,7 @@ function nls_fbf_theme_enqueue_styles()
     $parent_style = 'twenty-twenty-one-style';
 
     wp_enqueue_style(
-        'child-style',
+        'font-ploni',
         get_stylesheet_directory_uri() . '/fonts.css',
         array($parent_style),
         wp_get_theme()->get('Version')
