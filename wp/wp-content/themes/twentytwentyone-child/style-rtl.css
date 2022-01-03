@@ -18,9 +18,9 @@
 
 :root {
   /* Font Family */
-  --yashir--font-primary: Arimo, Roboto, sans-serif;
-  --global--font-primary: Arimo, Roboto, sans-serif;
-  --global--font-secondary: Arimo, Roboto, sans-serif;
+  --yashir--font-primary: Ploni, Arimo, sans-serif;
+  --global--font-primary: Ploni, Arimo, Roboto, sans-serif;
+  --global--font-secondary: Ploni, Arimo, sans-serif;
   --heading--font-family: var(--global--font-primary);
   --yashir--purple-color: #1e285a;
   --yashir--red-color: #ff375c;

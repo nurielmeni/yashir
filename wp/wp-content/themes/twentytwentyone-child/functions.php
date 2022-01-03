@@ -15,6 +15,13 @@ function nls_fbf_theme_enqueue_styles()
 
     wp_enqueue_style(
         'child-style',
+        get_stylesheet_directory_uri() . '/fonts.css',
+        array($parent_style),
+        wp_get_theme()->get('Version')
+    );
+    
+    wp_enqueue_style(
+        'child-style',
         get_stylesheet_directory_uri() . '/style-rtl.css',
         array($parent_style),
         wp_get_theme()->get('Version')

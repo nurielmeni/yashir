@@ -7,3 +7,27 @@ and open the template in the editor.
     Created on : May 13, 2018, 10:58:04 PM
     Author     : nurielmeni
 */
+@font-face{
+	font-family: 'Ploni';
+	font-weight: 400; /*(regular)*/
+	font-style: normal;
+    src: url('./fonts/ploni/ploni-regular-aaa.otf') format('opentype');
+}
+@font-face{
+	font-family: 'Ploni';
+	font-weight: 500; /*(regular)*/
+	font-style: normal;
+    src: url('./fonts/ploni/ploni-medium-aaa.otf') format('opentype');
+}
+@font-face{
+	font-family: 'Ploni';
+	font-weight: 700; /*(bold)*/
+	font-style: normal;
+	src: url('./fonts/ploni/ploni-bold-aaa.otf') format('opentype');
+}
+@font-face{
+    font-family: 'Ploni';
+	font-weight: 900; /*(black)*/
+	font-style: normal;
+    src: url('./fonts/ploni/ploni-ultrabold-aaa.otf') format('opentype');
+}
