@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NlsHunterFbf\n"
 "POT-Creation-Date: 2021-08-18 18:26+0300\n"
-"PO-Revision-Date: 2021-10-26 16:40+0300\n"
+"PO-Revision-Date: 2022-01-05 14:50+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: he_IL\n"
@@ -78,7 +78,7 @@ msgstr "מזהה ספק"
 #: public/class-NlsHunterFbf-public.php:152
 #: public/class-NlsHunterFbf-public.php:157 templates/applyForJobs.php:15
 msgid "Full Name"
-msgstr "שם החבר:"
+msgstr "שם החבר (שם מלא):"
 
 #: public/class-NlsHunterFbf-public.php:153 templates/applyForJobs.php:22
 msgid "Cell"
@@ -132,7 +132,7 @@ msgstr "הפרטים שלי:"
 
 #: templates/applyForJobs.php:66
 msgid "My Name"
-msgstr "שמי:"
+msgstr "שמי (שם מלא):"
 
 #: templates/applyForJobs.php:86
 msgid "Submit CV"
