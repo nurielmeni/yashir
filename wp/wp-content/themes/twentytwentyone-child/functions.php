@@ -28,6 +28,22 @@ function nls_fbf_theme_enqueue_styles()
     );
 }
 
+/* Add google analitics to the head */
+add_action('wp_head', 'addGoogleAnalitics');
+function addGoogleAnalitics(){
+?>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src=https://www.googletagmanager.com/gtag/js?id=UA-480563-1></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'UA-480563-1');
+    </script>
+<?php
+};
+
 
 /**
  * Add child theme translations
