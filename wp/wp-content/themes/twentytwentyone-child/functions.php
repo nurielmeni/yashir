@@ -19,7 +19,7 @@ function nls_fbf_theme_enqueue_styles()
         array($parent_style),
         wp_get_theme()->get('Version')
     );
-    
+
     wp_enqueue_style(
         'child-style',
         get_stylesheet_directory_uri() . '/style-rtl.css',
@@ -29,21 +29,45 @@ function nls_fbf_theme_enqueue_styles()
 }
 
 /* Add google analitics to the head */
-add_action('wp_head', 'addGoogleAnalitics');
-function addGoogleAnalitics(){
+add_action('wp_head', 'addGoogleAnaliticsHead');
+function addGoogleAnaliticsHead()
+{
 ?>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src=https://www.googletagmanager.com/gtag/js?id=UA-480563-1></script>
+    <!-- Google Tag Manager -->
+
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'UA-480563-1');
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P4RKG5H');
     </script>
+
+    <!-- End Google Tag Manager -->
 <?php
 };
 
+// Add Google Tag code which is supposed to be placed after opening body tag.
+add_action('wp_body_open', 'addGoogleAnaliticsBody');
+
+function addGoogleAnaliticsBody()
+{
+?>
+    <!-- Google Tag Manager (noscript) -->
+
+    <noscript><iframe src=https://www.googletagmanager.com/ns.html?id=GTM-P4RKG5H height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- End Google Tag Manager (noscript) -->
+<?php
+}
 
 /**
  * Add child theme translations
