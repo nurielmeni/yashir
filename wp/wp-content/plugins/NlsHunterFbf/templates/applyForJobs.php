@@ -49,7 +49,7 @@ $jobOptions = $jobs;
                     <!--  CV FILE -->
                     <div class="nls-apply-field browse">
                         <label for="friend-cv--0"><span class="text-button add-resume"><?= __('Append CV File', 'NlsHunterFbf') ?></span></label>
-                        <input type="file" id="friend-cv--0" name="friend-cv[]" hidden class="ltr" aria-invalid="false" aria-required="true">
+                        <input type="file" id="friend-cv--0" name="friend-cv[]" hidden class="ltr" aria-invalid="false" aria-required="true" accept="text/rtf, application/pdf, application/msword, text/plain, .doc, .docx, application/vnd.openxmlformats-officedocument.wordprocessingml.document">
                         <div class="help-block"></div>
                     </div>
                 </div>
